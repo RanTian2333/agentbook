@@ -57,6 +57,8 @@ def dispatch_demo(reply: dict[str, Any]) -> dict[str, Any]:
         "ok": True,
         "city": city,
         "source": "演示数据，非实时天气",
+        "issued_at": "演示资料，无真实发布时间",
+        "forecast_for": "演示时段：今晚",
         "rain_probability": 0.70 if city == "台北" else 0.40,
     }
 

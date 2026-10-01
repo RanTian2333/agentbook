@@ -30,8 +30,8 @@ TOOLS = [
 
 DEMO_WEATHER = {
     "city": "台北",
-    "data_time": "演示样例，无实时数据时间",
-    "temperature_c": 28,
+    "issued_at": "演示资料，无真实发布时间",
+    "forecast_for": "演示时段：今晚",
     "rain_probability": 0.70,
 }
 
@@ -142,7 +142,7 @@ def run(question: str) -> str:
 
 
 def main() -> int:
-    question = " ".join(sys.argv[1:]) or "台北现在会下雨吗？"
+    question = " ".join(sys.argv[1:]) or "台北今晚降雨概率是多少？"
     try:
         print(run(question))
     except OpenAIError as exc:
